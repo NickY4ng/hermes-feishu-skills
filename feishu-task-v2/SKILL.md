@@ -35,13 +35,13 @@ description: "飞书任务管理工具。触发词：创建任务、查看任务
 
 ### 基本导入
 ```python
-from feishu_task import FeishuTask
+from skills.feishu_task import FeishuTask
 
 # 创建客户端
 task_client = FeishuTask()
 
 # 或者使用便捷函数
-from feishu_task import (
+from skills.feishu_task import (
     query_tasks, create_task, update_task,
     delete_task, complete_task, get_my_tasks
 )
@@ -100,7 +100,7 @@ success = delete_task(task_guid="xxx")
 
 #### 5. 智能决策
 ```python
-from feishu_task import analyze_task_type
+from skills.feishu_task import analyze_task_type
 
 # 分析应该创建日历还是任务
 analysis = analyze_task_type("今天下午3点前完成报告")
@@ -116,9 +116,9 @@ print(analysis)
 
 ### 完整工作流
 ```python
-from feishu_task import analyze_task_type
-from feishu_calendar import create_event
-from feishu_task import create_task
+from skills.feishu_task import analyze_task_type
+from skills.feishu_calendar import create_event
+from skills.feishu_task import create_task
 
 def smart_create_schedule(user_input):
     """智能创建日程或任务"""
@@ -146,7 +146,7 @@ def smart_create_schedule(user_input):
 
 运行完整测试套件：
 ```bash
-cd /path/to/feishu-task-v2
+cd ~/.hermes/skills/productivity/feishu-task-v2
 python3 test_task.py
 ```
 
@@ -155,6 +155,10 @@ python3 test_task.py
 python3 smoke_test.py
 ```
 
+运行智能决策测试：
+```bash
+python3 test_decision.py
+```
 
 ## 设计原则
 
@@ -167,13 +171,3 @@ python3 smoke_test.py
 
 - **v1.0.0** (2026-04-02): 初始版本
 - **v1.1.0** (2026-04-22): 创建任务时自动将当前用户设为负责人+关注人
-
-## 注意事项
-
-### 关于「应用身份」的说明
-
-本 skill 使用 `tenant_access_token`（应用身份）调用 API，而非用户身份。
-
-**关键点**：用应用身份创建的任务，默认不会出现在用户的任务列表里。因此本 skill 在创建任务时会自动将当前用户设为 assignee（负责人）和 follower（关注人），这样用户才能在自己的任务列表里看到这条任务。
-
-如果你去掉了这个逻辑，任务对自己是不可见的。

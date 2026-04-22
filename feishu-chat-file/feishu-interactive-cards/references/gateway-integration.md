@@ -37,7 +37,7 @@ Agent 处理回调
     "feishu": {
       "accounts": {
         "main": {
-          "appId": "cli_xxx",
+          "appId": "YOUR_APP_ID",
           "appSecret": "xxx"
         }
       }
@@ -68,7 +68,7 @@ Agent 处理回调
     "operator": {
       "tenant_key": "1b99004b5f805740",
       "user_id": "a63db8e1",
-      "open_id": "ou_9da8247e845a9c8a29a458787a21725a",
+      "open_id": "YOUR_USER_OPEN_ID",
       "union_id": "on_64e9b02ecbb7964d1e6ad7c4cef54434"
     },
     "action": {
@@ -80,7 +80,7 @@ Agent 处理回调
     },
     "context": {
       "open_message_id": "om_x100b5768...",
-      "open_chat_id": "oc_f30cdd9dfc556c0399be35eb4a12b2a2"
+      "open_chat_id": "YOUR_CHAT_ID"
     },
     "raw_data": { /* 完整的原始回调数据 */ }
   }

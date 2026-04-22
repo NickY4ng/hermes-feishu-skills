@@ -69,7 +69,7 @@ class FeishuTask:
             })
         return tasks
 
-    # 默认用户 open_id（杨航），每次创建任务自动设为负责人+关注人
+    # 默认用户 open_id（当前用户），每次创建任务自动设为负责人+关注人
     DEFAULT_USER_OPEN_ID = 'YOUR_USER_OPEN_ID'
 
     def create(self, summary: str, description: str = "",

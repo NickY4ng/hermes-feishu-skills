@@ -27,13 +27,13 @@ description: "飞书日历管理工具。触发词：查日历、看日程、今
 
 ### 基本导入
 ```python
-from feishu_calendar import FeishuCalendar
+from skills.feishu_calendar import FeishuCalendar
 
 # 创建客户端
 calendar = FeishuCalendar()
 
 # 或者使用便捷函数
-from feishu_calendar import query_events, create_event, update_event, delete_event
+from skills.feishu_calendar import query_events, create_event, update_event, delete_event
 ```
 
 ### 功能示例
@@ -85,7 +85,7 @@ success = delete_event(event_id="xxx_0")
 
 运行冒烟测试：
 ```bash
-cd /path/to/feishu-calendar-v2
+cd ~/.hermes/skills/productivity/feishu-calendar-v2
 python3 smoke_test.py
 ```
 
@@ -98,16 +98,7 @@ python3 smoke_test.py
 
 ## 注意事项
 
-### 关于「应用身份」的说明
-
-本 skill 使用 `tenant_access_token`（应用身份）调用 API，而非用户身份。
-
-**关键点**：用应用身份创建的日程，默认不会出现在用户的个人日历里。因此本 skill 在创建日程后会自动将用户加为 attendee（`rsvp_comment: "负责人"`），这样用户才能在日历中看到这条日程并收到邀请通知。
-
-如果你去掉了这个逻辑，行程对自己是不可见的。
-
-### 其他注意事项
-
+- 使用 `tenant_access_token`（应用身份）调用 API
 - 创建日程后，用户会收到飞书日历邀请，需要接受才能在日历中显示
 - 时间格式：ISO 8601（`2026-04-02T14:00:00+08:00`）
 - API 时间戳单位：秒（Unix timestamp），不是毫秒

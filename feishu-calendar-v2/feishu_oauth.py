@@ -11,7 +11,7 @@ import webbrowser
 from threading import Thread
 import time
 
-APP_ID = 'cli_a93a403a0139dcd1'
+APP_ID = 'YOUR_APP_ID'
 APP_SECRET = 'MjtlozmlObB0l7iLn5PKqcEXqjXMyqd3'
 REDIRECT_URI = 'http://localhost:8765/callback'
 

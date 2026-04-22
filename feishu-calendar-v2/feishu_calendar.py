@@ -14,7 +14,7 @@ from datetime import datetime, timedelta
 from typing import List, Dict, Optional
 
 
-# 默认用户 open_id（杨航）
+# 默认用户 open_id（当前用户）
 DEFAULT_USER_OPEN_ID = 'YOUR_USER_OPEN_ID'
 
 
@@ -39,7 +39,7 @@ class FeishuCalendar:
     """飞书日历客户端"""
 
     def __init__(self, app_id: str = None, app_secret: str = None):
-        self.app_id = app_id or os.environ.get('FEISHU_APP_ID') or 'cli_a93a403a0139dcd1'
+        self.app_id = app_id or os.environ.get('FEISHU_APP_ID') or 'YOUR_APP_ID'
         _env_secret = os.environ.get('FEISHU_APP_SECRET')
         if app_secret:
             self.app_secret = app_secret

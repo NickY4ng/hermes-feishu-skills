@@ -19,7 +19,7 @@ if [ $# -lt 1 ]; then
 fi
 
 FILE_PATH="$1"
-RECEIVER_ID="${2:-${DEFAULT_RECEIVER:-ou_ef2ea35962c9b8aa6f68976a109eb52c}}"
+RECEIVER_ID="${2:-${DEFAULT_RECEIVER:-YOUR_USER_OPEN_ID}}"
 
 if [ ! -f "$FILE_PATH" ]; then
     echo "错误: 文件不存在: $FILE_PATH"

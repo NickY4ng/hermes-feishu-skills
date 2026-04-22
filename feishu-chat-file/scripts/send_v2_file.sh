@@ -2,9 +2,9 @@
 # 发送供应链上下游分析维度框架_V2.md文件
 
 APP_ID="YOUR_APP_ID"
-APP_SECRET="OHEAeWOSWkvijc8cEseyVcI4tFPgRPlr"
-RECEIVER_ID="ou_ef2ea35962c9b8aa6f68976a109eb52c"
-FILE_PATH="/Users/nickyang/.openclaw/workspace/大卡鹰眼项目/供应链上下游分析维度框架_V2.md"
+APP_SECRET = "YOUR_APP_SECRET"
+RECEIVER_ID="YOUR_USER_OPEN_ID"
+FILE_PATH="./.openclaw/workspace/大卡鹰眼项目/供应链上下游分析维度框架_V2.md"
 
 if [ ! -f "$FILE_PATH" ]; then
     echo "文件不存在: $FILE_PATH"

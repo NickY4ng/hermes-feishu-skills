@@ -2,9 +2,9 @@
 # 发送完整的货物流向分析文件
 
 APP_ID="YOUR_APP_ID"
-APP_SECRET="OHEAeWOSWkvijc8cEseyVcI4tFPgRPlr"
-RECEIVER_ID="ou_ef2ea35962c9b8aa6f68976a109eb52c"
-FILE_PATH="/Users/nickyang/.openclaw/workspace/货物流向分析维度框架_完整版.md"
+APP_SECRET = "YOUR_APP_SECRET"
+RECEIVER_ID="YOUR_USER_OPEN_ID"
+FILE_PATH="./.openclaw/workspace/货物流向分析维度框架_完整版.md"
 
 if [ ! -f "$FILE_PATH" ]; then
     echo "文件不存在: $FILE_PATH"

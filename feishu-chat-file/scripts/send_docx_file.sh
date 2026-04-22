@@ -2,9 +2,9 @@
 # 发送Word文档文件
 
 APP_ID="YOUR_APP_ID"
-APP_SECRET="OHEAeWOSWkvijc8cEseyVcI4tFPgRPlr"
-RECEIVER_ID="ou_ef2ea35962c9b8aa6f68976a109eb52c"
-FILE_PATH="/Users/nickyang/.openclaw/workspace/openclaw-main-2/openclaw-main 2/虚拟运单项目/货物流向分析维度框架.docx"
+APP_SECRET = "YOUR_APP_SECRET"
+RECEIVER_ID="YOUR_USER_OPEN_ID"
+FILE_PATH="./.openclaw/workspace/openclaw-main-2/openclaw-main 2/虚拟运单项目/货物流向分析维度框架.docx"
 
 if [ ! -f "$FILE_PATH" ]; then
     echo "文件不存在: $FILE_PATH"

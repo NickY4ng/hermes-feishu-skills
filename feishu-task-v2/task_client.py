@@ -28,7 +28,7 @@ def _read_secret_from_env_file() -> Optional[str]:
 
 class FeishuTaskClient:
     def __init__(self, app_id: Optional[str] = None, app_secret: Optional[str] = None):
-        self.app_id = app_id or os.environ.get('FEISHU_APP_ID') or 'cli_a93a403a0139dcd1'
+        self.app_id = app_id or os.environ.get('FEISHU_APP_ID') or 'YOUR_APP_ID'
         _env_secret = os.environ.get('FEISHU_APP_SECRET')
         if app_secret:
             self.app_secret = app_secret
