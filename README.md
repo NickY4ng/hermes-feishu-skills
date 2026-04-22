@@ -146,6 +146,25 @@ curl -s -X POST 'https://open.feishu.cn/open-apis/auth/v3/tenant_access_token/in
 ```
 然后调用 [获取用户信息 API](https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/contact-v3/user/get)，传入任意用户的手机号或邮箱，即可获取其 open_id。
 
+### 第五步：理解「应用身份」与「自动添加用户」的机制
+
+> ⚠️ **这一节很重要，请先读完再开始使用。**
+
+**这三个 skill 使用的是「应用身份」（tenant_access_token）调用 API，而不是用户身份。**
+
+这意味着：
+- 用应用身份创建的**日程**，默认不会出现在用户的个人日历里
+- 用应用身份创建的**任务**，默认不会出现在用户的任务列表里
+
+**所以代码里会自动把用户加为负责人/邀请人：**
+
+| Skill | 自动操作 | 目的 |
+|-------|---------|------|
+| feishu-calendar-v2 | 创建日程后，自动将你加为 attendee（`rsvp_comment: "负责人"`） | 你能在自己日历里看到这条日程 |
+| feishu-task-v2 | 创建任务时，自动将你设为 assignee（负责人）+ follower（关注人） | 你能在自己任务列表里看到这条任务 |
+
+如果你不想要这个行为，可以修改代码去掉相关逻辑，但届时你创建的日程/任务对自己是不可见的。
+
 ---
 
 ## 目录结构

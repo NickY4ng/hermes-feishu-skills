@@ -71,7 +71,7 @@ curl -s -X POST "https://open.feishu.cn/open-apis/im/v1/messages?receive_id_type
 ## 封装脚本
 
 ```bash
-/Users/nickyang/.hermes/skills/feishu-chat-file/scripts/send_feishu_file.sh <file_path> [chat_id]
+feishu-chat-file/scripts/send.sh <file_path> [chat_id]
 ```
 
 - 默认 chat_id：`YOUR_CHAT_ID`（当前会话）
