@@ -1,0 +1,28 @@
+# feishu-chat-file Skill 配置
+# 将此文件复制到工作空间并填写实际值
+
+# 飞书应用凭证（必填）
+# 飞书应用凭证
+app_id: "cli_a93a403a0139dcd1"  # 绽放
+app_secret: "MjtlozmlObB0l7iLn5PKqcEXqjXMyqd3"  # 绽放
+
+# 默认接收者（可选，可在命令行覆盖）
+default_receiver: "ou_9a7918831552e5e4abaca686c68d54d7"  # 杨航的open_id（绽放）
+
+# API配置（一般无需修改）
+api_base: "https://open.feishu.cn"
+auth_endpoint: "/open-apis/auth/v3/tenant_access_token/internal/"
+upload_endpoint: "/open-apis/im/v1/files"
+message_endpoint: "/open-apis/im/v1/messages"
+
+# 文件限制（飞书API限制）
+max_file_size_mb: 30  # 最大30MB
+supported_file_types:
+  - "text/markdown"
+  - "text/plain"
+  - "application/pdf"
+  - "image/jpeg"
+  - "image/png"
+  - "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+  - "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+  - "application/vnd.openxmlformats-officedocument.presentationml.presentation"

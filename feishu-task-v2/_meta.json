@@ -1,0 +1,12 @@
+{
+  "ownerId": "kn7akgt520t01vgs2tzx7yk6m180kt26",
+  "slug": "feishu-task-v2",
+  "version": "1.0.0",
+  "publishedAt": 1775099800000,
+  "description": "全新的飞书任务管理Skill，基于飞书OpenAPI直接调用，支持完整的增删改查功能。包含智能决策模块，自动判断应该创建日历还是任务。",
+  "tags": ["feishu", "task", "todo", "productivity", "smart-decision"],
+  "dependencies": [],
+  "tested": true,
+  "testReport": "test-reports/smoke_test_20260402_0926.json",
+  "relatedSkills": ["feishu-calendar-v2"]
+}
