@@ -1,6 +1,6 @@
 ---
 name: feishu-chat-file
-version: 1.3.0
+version: 1.0.0
 description: 通过飞书聊天窗口直接发送文件。文件作为消息附件出现在聊天窗口，接收者点击即可下载。
 author: Hermes
 trigger:
